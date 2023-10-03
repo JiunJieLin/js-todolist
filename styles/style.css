@@ -1,0 +1,121 @@
+:root {
+  --primary-color: #354232;
+  --background-color: orange;
+  --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  --border-radius: 10px;
+}
+body {
+  width: 100% min height 100vh;
+  background-color: var(--background-color);
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-height: 628px;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrap h1 {
+  max-width: 304px;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 82px;
+  text-align: center;
+  margin-bottom: 26px;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
+
+.search {
+  position: relative;
+  width: 500px;
+  height: 48px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  margin-bottom: 8px;
+}
+.search input {
+  height: 24px;
+  margin: 12px;
+  border: none;
+  outline: none;
+  width: calc(100% - 64px);
+}
+
+.search button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  font-size: 30px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.search button:hover {
+  opacity: 0.8;
+}
+
+.list {
+  width: 500px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+}
+
+.list ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  cursor: pointer;
+}
+
+.list li {
+  flex: 1;
+  height: 52px;
+  line-height: 52px;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  transition: botder-color 0.3s ease-in-out;
+}
+.list li:hover {
+  border-bottom: 1px solid var(--primary-color);
+}
+.content {
+  padding: 20px;
+}
+
+.bottom-list {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+.bottom-list p {
+  font-size: 14px;
+  margin-left: 24px;
+  font-family: var(--font-family);
+}
+.btn-clear {
+  color: darkgray;
+  margin-right: 47px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.btn-clear:hover {
+  color: var(--primary-color);
+}
