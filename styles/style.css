@@ -8,6 +8,7 @@
 body {
   width: 100% min height 100vh;
   background-color: var(--background-color);
+  font-family: var(--font-family);
 }
 
 .wrap {
@@ -27,7 +28,6 @@ body {
   line-height: 82px;
   text-align: center;
   margin-bottom: 26px;
-  font-family: var(--font-family);
   color: var(--primary-color);
 }
 
@@ -66,13 +66,13 @@ body {
   opacity: 0.8;
 }
 
-.list {
+.titlelist {
   width: 500px;
   background-color: #fff;
   border-radius: var(--border-radius);
 }
 
-.list ul {
+.titlelist ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -81,20 +81,47 @@ body {
   cursor: pointer;
 }
 
-.list li {
+.titlelist li {
   flex: 1;
   height: 52px;
   line-height: 52px;
   font-size: 15px;
   text-align: center;
   border-bottom: 1px solid transparent;
-  transition: botder-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
 }
-.list li:hover {
+.titlelist li:hover {
   border-bottom: 1px solid var(--primary-color);
 }
-.content {
-  padding: 20px;
+.tasklist {
+  display: flex;
+  flex-direction: column;
+}
+.task {
+  display: flex;
+  align-items: center;
+}
+
+.tasklist-checkbox {
+  width: 20px;
+  height: 20px;
+}
+.tasklist-p {
+  border-bottom: 1px solid darkgray;
+  width: 392px;
+  height: 57px;
+  line-height: 57px;
+  text-align: left;
+  margin-left: 16px;
+}
+
+.btn-delete {
+  font-size: 40px;
+  border: none;
+  background: transparent;
+  color: darkgray;
+  cursor: pointer;
+  transform: rotate(45deg);
 }
 
 .bottom-list {
@@ -106,7 +133,6 @@ body {
 .bottom-list p {
   font-size: 14px;
   margin-left: 24px;
-  font-family: var(--font-family);
 }
 .btn-clear {
   color: darkgray;

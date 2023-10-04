@@ -3,28 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
     <div class="wrap">
       <h1>TO DO LIST</h1>
       <div class="search">
-        <input class="bar" type="text" placeholder="新增待辦事項" />
-        <button class="btn-plus" type="button">+</button>
+        <input class="inputbar" type="text" placeholder="新增待辦事項" />
+        <button class="btn-plus" onclick="addItem()">+</button>
       </div>
-      <div class="list">
+      <div class="titlelist">
         <ul>
           <li class="top-list">全部</li>
           <li class="top-list">待完成</li>
           <li class="top-list">已完成</li>
         </ul>
-        <div class="content"></div>
+
+        <ul class="tasklist"></ul>
+
         <div class="bottom-list">
           <p>0個待完成項目</p>
           <button class="btn-clear">清除已完成項目</button>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
+
+<!--<div class="tasklist">
+    <input type="checkbox" />
+    <p></p>
+    <button class="btn-delete">+</button>
+  </div>  -->
