@@ -19,3 +19,19 @@ const addItem = () => {
   tasklist.appendChild(newTodos);
   inputbar.value = "";
 };
+//刪除todo 透過復元素來監聽click事件
+tasklist.addEventListener("click", function (e) {
+  const target = e.target;
+  if (target.classList.contains("btn-delete")) {
+    if (confirm("確定刪除？")) {
+      target.parentNode.remove();
+    }
+  }
+});
+//標記 todo 為已完成/未完成
+tasklist.addEventListener("click", function (e) {
+  const target = e.target;
+  if (target.classList.contains("tasklist-checkbox")) {
+    target.parentNode.classList.toggle("checked");
+  }
+});
