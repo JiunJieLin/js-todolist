@@ -78,7 +78,6 @@ body {
   align-items: center;
   text-align: center;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
-  cursor: pointer;
 }
 
 .titlelist li {
@@ -88,10 +87,10 @@ body {
   font-size: 15px;
   text-align: center;
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 .titlelist li:hover {
-  border-bottom: 1px solid var(--primary-color);
+  color: #f0f0f0;
 }
 .tasklist {
   display: flex;
@@ -101,10 +100,15 @@ body {
   display: flex;
   align-items: center;
 }
+.task.checked .tasklist-p {
+  text-decoration: line-through;
+  color: darkgray;
+}
 
 .tasklist-checkbox {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .tasklist-p {
   border-bottom: 1px solid darkgray;
@@ -144,4 +148,13 @@ body {
 }
 .btn-clear:hover {
   color: var(--primary-color);
+}
+
+.remainingCount {
+  color: darkgray;
+  font-weight: bold;
+}
+/* checkbox custom style */
+input[type="checkbox"].tasklist-checkbox {
+  accent-color: var(--primary-color);
 }
