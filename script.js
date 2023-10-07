@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
         target.parentNode.remove();
       }
     } else if (target.classList.contains("tasklist-checkbox")) {
-      target.parentNode.classList.taggle("checked");
+      target.parentNode.classList.toggle("checked");
     }
     updateRemainingCount();
   };
