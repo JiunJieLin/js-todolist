@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const inputBar = document.querySelector(".inputBar");
   const tasklist = document.querySelector(".tasklist");
   const remainingCount = document.getElementById("remainingCount");
+  const clearTask = document.getElementById("clearButton");
 
   const updateRemainingCount = () => {
     const uncheckedItems = tasklist.querySelectorAll(
@@ -42,7 +43,16 @@ window.addEventListener("DOMContentLoaded", function () {
     updateRemainingCount();
   };
 
+  const clearItem = () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+      if (checkbox.checked) {
+        checkbox.parentElement.remove();
+      }
+    });
+  };
   addButton.addEventListener("click", addItem);
   tasklist.addEventListener("click", handleClick);
+  clearTask.addEventListener("click", clearItem);
   updateRemainingCount();
 });
