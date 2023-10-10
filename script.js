@@ -6,6 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
   const tasklist = document.querySelector(".tasklist");
   const remainingCount = document.getElementById("remainingCount");
   const clearTask = document.getElementById("clearButton");
+  const uncheckedList = document.querySelector(".unchecked-list");
 
   const updateRemainingCount = () => {
     const uncheckedItems = tasklist.querySelectorAll(
@@ -51,8 +52,26 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     });
   };
+  //篩選出沒有打勾的todo並陳列在待完成
+  const uncheckedTodo = () => {
+    const uncheckedItemsList = document.createElement("ul");
+    const taskItems = tasklist.querySelectorAll(".task");
+    taskItems.forEach((taskItem) => {
+      const checkbox = taskItem.querySelector(".tasklist-checkbox");
+      if (!checkbox.checked) {
+        const listItem = document.createElement("li");
+        listItem.textContent =
+          taskItem.querySelector(".tasklist-p").textContent;
+        uncheckedItemsList.appendChild(listItem);
+      }
+    });
+    uncheckedList.innerHTML = "";
+    uncheckedList.appendChild(uncheckedItemsList);
+  };
+
   addButton.addEventListener("click", addItem);
   tasklist.addEventListener("click", handleClick);
   clearTask.addEventListener("click", clearItem);
+  uncheckedList.addEventListener("click", uncheckedTodo);
   updateRemainingCount();
 });

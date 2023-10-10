@@ -88,6 +88,7 @@ body {
   text-align: center;
   border-bottom: 1px solid transparent;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 .titlelist li:hover {
   color: #f0f0f0;
