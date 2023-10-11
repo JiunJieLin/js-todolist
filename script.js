@@ -1,4 +1,4 @@
-"use strict";
+/*"use strict";
 
 window.addEventListener("DOMContentLoaded", function () {
   const addButton = document.querySelector(".btn-plus");
@@ -75,3 +75,4 @@ window.addEventListener("DOMContentLoaded", function () {
   uncheckedList.addEventListener("click", uncheckedTodo);
   updateRemainingCount();
 });
+*/
