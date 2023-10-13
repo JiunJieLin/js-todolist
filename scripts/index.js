@@ -4,7 +4,7 @@ import { render } from "./render.js";
 
 window.addEventListener("DOMContentLoaded", function () {
   const todos = [];
-  let filterStatus = "all"; //?
+  let filterStatus = "all";
 
   const {
     addButton,

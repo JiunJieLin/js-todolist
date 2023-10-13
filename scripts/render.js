@@ -3,6 +3,7 @@ import { getFilteredTodos, updateRemainingCount } from "./utils.js";
 export const render = (todos, tasklist, remainingCount, filterStatus) => {
   tasklist.innerHTML = "";
   const filteredTodos = getFilteredTodos(todos, filterStatus);
+  console.log(filteredTodos);
 
   filteredTodos.forEach((todo) => {
     const newTodo = document.createElement("li");

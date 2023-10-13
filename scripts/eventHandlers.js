@@ -5,7 +5,7 @@ export const addItem = (todos, inputBar, render) => {
   inputBar.value = "";
   render();
 };
-//把未勾選的push到todos
+//按下清除，把未勾選的push到todos
 export const clearItem = (todos, render) => {
   const filteredTodos = todos.filter((todo) => !todo.checked);
   todos.length = 0;
